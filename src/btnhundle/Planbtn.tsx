@@ -13,7 +13,8 @@ const Planbtn = ({ data }: { data: IExercise }) => {
     const handalePlanBtn = () => {
         const alreadyPlan = todaysPlan.some((plan)=>plan.id === data.id);
         if(alreadyPlan){
-            toast.error(`${data.name} is already plan `)
+            toast.error(`${data.name} is already added`)
+            return
         }else{
 
             setTodaysPlan([ ...todaysPlan , data]);
