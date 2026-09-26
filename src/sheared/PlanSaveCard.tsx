@@ -1,9 +1,9 @@
 import Deletbtn from '@/btnhundle/Deletbtn';
+import MarkasDoneBtn from '@/btnhundle/MarkasDoneBtn';
 import { IExercise } from '@/type/IExercise';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FaCheck } from 'react-icons/fa';
 import { MdOutlineAccessTimeFilled, MdStar } from 'react-icons/md';
 import { RiPieChart2Fill } from 'react-icons/ri';
 
@@ -37,7 +37,7 @@ const PlanSaveCard = ({ data, type }: { data: IExercise,type:string }) => {
                 <Link href={`/detailsPage/${data.id}`}>
                  <button className="btn px-6 rounded-2xl border border-[#7a717142] ">View Detaies</button>
                 </Link>
-                <button className="btn px-6 rounded-2xl bg-[#C2F800] text-black"><FaCheck />Mark as Done</button>
+                <MarkasDoneBtn  data={data}/>
                 <Deletbtn id={data.id} type= {type} />
 
             </div>

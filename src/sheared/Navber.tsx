@@ -7,14 +7,10 @@ import { FitLogContext } from "@/context/FitLogContext";
 const link = <>
 
   <div className="grid lg:flex gap-2 text-[1rem] cursor-alias  ">
-    <button className="btn rounded-2xl border-none bg-black px-5  hover:bg-[#c2f8002c]">
-      <Link href='/' className="hover:text-[#C2F800]">Home</Link>
-    </button>
-
-    <button className="btn rounded-2xl bg-black  px-5 border-none  hover:bg-[#c2f80028]">
+    <button className=" rounded-2xl bg-black py-1 px-6 border-none  hover:bg-[#c2f80028]">
       <Link href='/my-plan' className="hover:text-[#C2F800]" >My Plan</Link>
     </button>
-    <button className="btn rounded-2xl bg-black px-5 border-none  hover:bg-[#c2f80033] ">
+    <button className=" rounded-2xl bg-black px-6 py-1 border-none  hover:bg-[#c2f80033] ">
       <Link href='/workouts' className="hover:text-[#C2F800]">Workouts</Link>
     </button>
 
@@ -25,7 +21,7 @@ const Navber = () => {
   const { saveWorkout } = useContext(FitLogContext)
 
   return (
-    <header className="sticky top-0 z-50    border border-base-200/60   shadow-lg backdrop-blur-md lg:px-6">
+    <header className="sticky top-0 z-50  border border-base-200/60   shadow-lg backdrop-blur-md lg:px-6">
       <div className="navbar container mx-auto ">
         <div className="navbar-start">
           <div className="dropdown lg:hidden">
@@ -80,8 +76,8 @@ const Navber = () => {
         </div>
         <div className="navbar-end gap-2">
           <div className="space-x-2.5 flex items-center gap-4 ">
-            <button>Plan <span className={`px-2   bg-[#C2F800] text-black font-bold rounded-4xl {todaysPlan.length>} `}>{`${todaysPlan.length}`}</span></button>
-            <button>Saved <span className="px-2 bg-[#C2F800] text-black font-bold rounded-full">{`${saveWorkout.length}`}</span></button>
+            <button>Plan <span className={`px-2    text-black font-bold rounded-4xl ${todaysPlan.length>0 ? "bg-[#C2F800]":"text-white border border-[#5f685f54]"} `}>{`${todaysPlan.length}`}</span></button>
+            <button>Saved <span className={`px-2  text-black font-bold rounded-full ${saveWorkout.length>0 ? "bg-[#C2F800]":"text-white border border-[#5f685f54]"} `}>{`${saveWorkout.length}`}</span></button>
           </div>
 
         </div>
