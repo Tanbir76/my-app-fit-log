@@ -11,7 +11,7 @@ const LibraryData = async () => {
     console.log(fitLogData, "data created");
 
     return (
-        <div className=" container mx-auto mt-22">
+        <div id="library" className=" container mx-auto mt-22">
             <h1 className="font-extrabold text-2xl">THE</h1>
             <p className="text-[#9CA3AF] text-[18px]">Twelve lifts covering every major muscle group.</p>
 

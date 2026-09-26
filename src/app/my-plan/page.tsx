@@ -4,6 +4,7 @@ import CalculatTotalCalories from "@/oparetion/CalculatTotalCalories";
 import CalculatTotalTime from "@/oparetion/CalculatTotalTime";
 import PlanSaveCard from "@/sheared/PlanSaveCard";
 import { IExercise } from "@/type/IExercise";
+import Link from "next/link";
 import { useContext, useState } from "react";
 
 const MyPlan = () => {
@@ -83,10 +84,11 @@ const MyPlan = () => {
                                 <p className="text-[#cfcfb656]">
                                     Browse the library and add a lift to get today moving.
                                 </p>
-
+                                <Link href='/' >
                                 <button className="btn rounded-2xl mt-5 px-4 bg-[#C2F800] text-black">
                                     Go to workouts
                                 </button>
+                                </Link>
                             </div>
                         )}
                     </div>
@@ -115,10 +117,12 @@ const MyPlan = () => {
                                 <p className="text-[#cfcfb656]">
                                     Browse the library and add a lift to get today moving.
                                 </p>
+                                <Link href='/' >
 
                                 <button className="btn rounded-2xl mt-5 px-4 bg-[#C2F800] text-black">
                                     Go to workouts
                                 </button>
+                                </Link>
                             </div>
                         )}
                     </div>
