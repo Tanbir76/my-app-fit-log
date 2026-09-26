@@ -80,8 +80,8 @@ const Navber = () => {
         </div>
         <div className="navbar-end gap-2">
           <div className="space-x-2.5 flex items-center gap-4 ">
-            <button>Plan <span className="p-1 bg-[#C2F800] text-black font-bold rounded-4xl ">{`${todaysPlan.length}`}</span></button>
-            <button>Saved <span className="p-1 bg-[#C2F800] text-black font-bold rounded-full">{`${saveWorkout.length}`}</span></button>
+            <button>Plan <span className={`px-2   bg-[#C2F800] text-black font-bold rounded-4xl {todaysPlan.length>} `}>{`${todaysPlan.length}`}</span></button>
+            <button>Saved <span className="px-2 bg-[#C2F800] text-black font-bold rounded-full">{`${saveWorkout.length}`}</span></button>
           </div>
 
         </div>
