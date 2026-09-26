@@ -25,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-theme="dark"
       className={`${oswald.className}  h-full antialiased`}
     >
-      <body className="min-h-full flex bg-black flex-col">
+      <body className="min-h-full flex flex-col">
         <FitLogProvider>
           <ToastContainer />
 
