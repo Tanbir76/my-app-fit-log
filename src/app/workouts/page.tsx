@@ -96,7 +96,7 @@ const Workouts = () => {
                         type="radio"
                         name="my_tabs_6"
                         className="tab text-[16px] px-6  border border-l-0 rounded-r-2xl border-[#ffffcc62] checked:bg-[#cfcfb656]  checked:text-[#C2F800] "
-                        aria-label="Workouts"
+                        aria-label=" Save Workouts"
                         defaultChecked
                     /><div className="tab-content mt-20 bg-black space-y-2.5">
                         {sortedWorkout.length > 0 ? (
