@@ -4,6 +4,7 @@ import CalculatTotalCalories from "@/oparetion/CalculatTotalCalories";
 import CalculatTotalTime from "@/oparetion/CalculatTotalTime";
 import PlanSaveCard from "@/sheared/PlanSaveCard";
 import { IExercise } from "@/type/IExercise";
+import Link from "next/link";
 import { useContext, useState } from "react";
 
 const Workouts = () => {
@@ -14,13 +15,13 @@ const Workouts = () => {
     const [sortBy, setSortBy] = useState<"duration" | "calories" | "rating">("duration");
     const sortExercise = (data: IExercise[]) => {
         const sortedExercise = [...data];
-        if (sortBy === "duration"){
-            sortedExercise.sort((a, b)=> b.duration - a.duration);
-        }else if(sortBy === "calories"){
+        if (sortBy === "duration") {
+            sortedExercise.sort((a, b) => b.duration - a.duration);
+        } else if (sortBy === "calories") {
             sortedExercise.sort((a, b) => b.caloriesBurned - a.caloriesBurned)
 
-        }else if(sortBy === "rating"){
-            sortedExercise.sort((a, b)=> b.rating- a.rating )
+        } else if (sortBy === "rating") {
+            sortedExercise.sort((a, b) => b.rating - a.rating)
         }
         return sortedExercise;
     }
@@ -69,7 +70,7 @@ const Workouts = () => {
                         {sortedTodaysPlan.length > 0 ? (
                             sortedTodaysPlan.map((data) => (
                                 <PlanSaveCard
-                                   type="todaysPlan"
+                                    type="todaysPlan"
                                     data={data}
                                     key={data.id}
                                 />
@@ -116,18 +117,20 @@ const Workouts = () => {
                                 <p className="text-[#cfcfb656]">
                                     Browse the library and add a lift to get today moving.
                                 </p>
+                                <Link href='/' >
 
-                                <button className="btn rounded-2xl mt-5 px-4 bg-[#C2F800] text-black">
-                                    Go to workouts
-                                </button>
+                                    <button className="btn rounded-2xl mt-5 px-4 bg-[#C2F800] text-black">
+                                        Go to workouts
+                                    </button>
+                                </Link>
                             </div>
                         )}
                     </div>
                     <div className="absolute right-4 flex items-center gap-4 ">
                         <h1>SortBy</h1>
                         <select defaultValue="Duration"
-                         onChange={(e) =>setSortBy(e.target.value as "duration" | "calories" | "rating")} 
-                         className="select ">
+                            onChange={(e) => setSortBy(e.target.value as "duration" | "calories" | "rating")}
+                            className="select ">
                             <option value={"duration"}>Duration</option>
                             <option value={"calories"}>Calories</option>
                             <option value={'rating'}>Rating</option>

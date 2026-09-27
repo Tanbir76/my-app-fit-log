@@ -25,7 +25,7 @@ const PlanSaveCard = ({ data, type }: { data: IExercise,type:string }) => {
                 <div className="px-4 ">
                     <h1 className=" font-bold mt-5">{data.name}</h1>
                     <p className="text-[#9CA3AF] text-[14px] mb-4">{data.equipment}</p>
-                    <div className="flex gap-4 justify-between items-center mt-2 mb-5 text-[#9ca3afda]">
+                    <div className="grid md:flex gap-4 justify-between items-center mt-2 mb-5 text-[#9ca3afda]">
                         <p className="flex items-center gap-1"><MdOutlineAccessTimeFilled className='text-[#C2F800]' />{data.duration}  min</p>
                         <p className="flex items-center gap-1"><RiPieChart2Fill className='text-[#C2F800]'  />{data.caloriesBurned} kcal</p>
                         <p className="flex items-center gap-1"><MdStar className='text-[#C2F800]' />{data.rating}</p>
